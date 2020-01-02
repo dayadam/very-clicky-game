@@ -16,32 +16,68 @@ import Steeplechase from "./components/images/Steeplechase.svg";
 import "./components/Card.css";
 
 const images = [
-  { image: Skateboard, id: 1, clicked: false, name: "Skateboard" },
-  { image: Bike, id: 2, clicked: false, name: "Bike" },
-  { image: Surfer, id: 3, clicked: false, name: "Surfer" },
-  { image: HammerThrow, id: 4, clicked: false, name: "HammerThrow" },
-  { image: Soccer, id: 5, clicked: false, name: "Soccer" },
-  { image: Muscle, id: 6, clicked: false, name: "Muscle" },
-  { image: Runner, id: 7, clicked: false, name: "Runner" },
-  { image: Baseball, id: 8, clicked: false, name: "Baseball" },
-  { image: Motocross, id: 9, clicked: false, name: "Motocross" },
-  { image: IceSkating, id: 10, clicked: false, name: "IceSkating" },
-  { image: Stretching, id: 11, clicked: false, name: "Stretching" },
-  { image: Steeplechase, id: 12, clicked: false, name: "Steeplechase" }
+  { image: Skateboard, id: 1, name: "Skateboard" },
+  { image: Bike, id: 2, name: "Bike" },
+  { image: Surfer, id: 3, name: "Surfer" },
+  { image: HammerThrow, id: 4, name: "HammerThrow" },
+  { image: Soccer, id: 5, name: "Soccer" },
+  { image: Muscle, id: 6, name: "Muscle" },
+  { image: Runner, id: 7, name: "Runner" },
+  { image: Baseball, id: 8, name: "Baseball" },
+  { image: Motocross, id: 9, name: "Motocross" },
+  { image: IceSkating, id: 10, name: "IceSkating" },
+  { image: Stretching, id: 11, name: "Stretching" },
+  { image: Steeplechase, id: 12, name: "Steeplechase" }
 ];
 
 class App extends Component {
   state = {
     clicked: [],
+    prevClick: [],
     score: 0,
     images
   };
 
   handleClick = id => {
+    const prevClick = this.state.clicked.filter(
+      clickedItem => clickedItem === id
+    );
+    const images = this.reorder(this.state.images);
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const clicked = this.state.clicked.concat(id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ clicked });
+    this.setState({ prevClick, images });
+    if (prevClick.length === 0) {
+      const clicked = this.state.clicked.concat(id);
+      // Set this.state.friends equal to the new friends array
+      this.setState({ clicked: clicked });
+    } else {
+      
+      this.setState({ clicked: [], prevClick: [] });
+    }
+  };
+
+  componentDidMount() {
+    const images = this.reorder(this.state.images);
+    this.setState({ images });
+  }
+
+  reorder = stateImagesArray => {
+    var currentIndex = stateImagesArray.length,
+      temporaryValue,
+      randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = stateImagesArray[currentIndex];
+      stateImagesArray[currentIndex] = stateImagesArray[randomIndex];
+      stateImagesArray[randomIndex] = temporaryValue;
+    }
+
+    return stateImagesArray;
   };
 
   //handleClick = event => {};
