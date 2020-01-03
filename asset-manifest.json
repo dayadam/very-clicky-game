@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/very-clicky-game/static/css/main.6c51ed73.chunk.css",
+    "main.js": "/very-clicky-game/static/js/main.58874a02.chunk.js",
+    "main.js.map": "/very-clicky-game/static/js/main.58874a02.chunk.js.map",
+    "runtime-main.js": "/very-clicky-game/static/js/runtime-main.53807d5a.js",
+    "runtime-main.js.map": "/very-clicky-game/static/js/runtime-main.53807d5a.js.map",
+    "static/js/2.86c35142.chunk.js": "/very-clicky-game/static/js/2.86c35142.chunk.js",
+    "static/js/2.86c35142.chunk.js.map": "/very-clicky-game/static/js/2.86c35142.chunk.js.map",
+    "index.html": "/very-clicky-game/index.html",
+    "precache-manifest.cee8ccf10e755d14649710a2c2940183.js": "/very-clicky-game/precache-manifest.cee8ccf10e755d14649710a2c2940183.js",
+    "service-worker.js": "/very-clicky-game/service-worker.js",
+    "static/css/main.6c51ed73.chunk.css.map": "/very-clicky-game/static/css/main.6c51ed73.chunk.css.map",
+    "static/js/2.86c35142.chunk.js.LICENSE": "/very-clicky-game/static/js/2.86c35142.chunk.js.LICENSE",
+    "static/media/Baseball.svg": "/very-clicky-game/static/media/Baseball.125cc5cf.svg",
+    "static/media/Bike.svg": "/very-clicky-game/static/media/Bike.ce929805.svg",
+    "static/media/Hammer-throw.svg": "/very-clicky-game/static/media/Hammer-throw.03d5b3a1.svg",
+    "static/media/Ice-skating.svg": "/very-clicky-game/static/media/Ice-skating.d25922e3.svg",
+    "static/media/Motocross.svg": "/very-clicky-game/static/media/Motocross.33caf8f9.svg",
+    "static/media/Muscle.svg": "/very-clicky-game/static/media/Muscle.4854dd77.svg",
+    "static/media/Runner.svg": "/very-clicky-game/static/media/Runner.bac6c477.svg",
+    "static/media/Skateboard.svg": "/very-clicky-game/static/media/Skateboard.a6549f49.svg",
+    "static/media/Soccer.svg": "/very-clicky-game/static/media/Soccer.882ebf75.svg",
+    "static/media/Steeplechase.svg": "/very-clicky-game/static/media/Steeplechase.7258bcb2.svg",
+    "static/media/Stretching.svg": "/very-clicky-game/static/media/Stretching.682c9dc7.svg",
+    "static/media/Surfer.svg": "/very-clicky-game/static/media/Surfer.af30d77d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.53807d5a.js",
+    "static/js/2.86c35142.chunk.js",
+    "static/css/main.6c51ed73.chunk.css",
+    "static/js/main.58874a02.chunk.js"
+  ]
+}
